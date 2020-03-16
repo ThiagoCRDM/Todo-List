@@ -53,10 +53,10 @@ export const Button = styled.button.attrs(
 
 
 export const Done = styled.button.attrs( props =>
-   ( { type: 'button', disabled: props.disabled })
+   ( { type: 'button', done: props.done })
 )`
 
-    background: #3b76e3;
+    background: #154d18;
     border: none;
     height: 35px;
     padding: 0 15px;
@@ -71,16 +71,7 @@ export const Done = styled.button.attrs( props =>
     font-weight: bold;
     font-size: 15px;
 
-    &[disabled]{
-        background: #19a63c;
-        cursor: not-allowed;
-        opacity: 0.8;
-        :hover{
-            color: #fff;
-            background:  #19a63c;
-        }
-    }
-
+    
     :hover{
       color: #000;
       background: #19a63c;
@@ -88,3 +79,33 @@ export const Done = styled.button.attrs( props =>
     }
  
  `;
+
+
+export const Pending = styled.button.attrs( props =>
+    ( { type: 'button' })
+ )`
+ 
+     background: #6b0191;
+     border: none;
+     height: 35px;
+     padding: 0 15px;
+     margin-left: 15px;
+     border-radius: 4px;
+ 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ 
+     color: #fff;
+     font-weight: bold;
+     font-size: 15px;
+ 
+     
+     :hover{
+       color: #000;
+       background: #ae07eb;
+       transition-delay: 5ms;
+     }
+  
+  `;
+ 
